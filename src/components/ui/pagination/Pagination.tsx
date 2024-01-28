@@ -38,7 +38,7 @@ const PaginationComponent: FC<{
 				prevEl: '.buttonPrev',
 				nextEl: '.buttonNext',
 			}}
-			initialSlide={currentPage}
+			initialSlide={currentPage - 1}
 			slidesPerGroup={8}
 			className={classes.pagination}
 			modules={[Navigation]}
