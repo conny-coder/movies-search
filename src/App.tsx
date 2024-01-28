@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/style.scss'
+import HomePage from './pages/Home'
+import { BrowserRouter, Route } from 'react-router-dom'
+import SingleMoviePage from 'pages/SingleMovie'
+import Layout from 'components/layout/Layout'
+import MoviesByGenrePage from 'pages/MoviesByGenre'
+import MoviesBySearchPage from 'pages/MoviesBySearch'
+import Error404Page from 'pages/Error404'
+import CustomSwitch from 'CustomRoutes'
+
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<Layout>
+				<ToastContainer autoClose={2000} />
+				<CustomSwitch>
+					<Route path="/" element={<HomePage />} />
+					<Route
+						path="/movies/by-genre/:genre/:pageNumber"
+						element={<MoviesByGenrePage />}
+					/>
+					<Route
+						path="/movies/search/:query?/:pageNumber"
+						element={<MoviesBySearchPage />}
+					/>
+					<Route path="/movie/:id" element={<SingleMoviePage />} />
+					<Route path="*" element={<Error404Page />} />
+				</CustomSwitch>
+			</Layout>
+		</BrowserRouter>
+	)
 }
 
-export default App;
+export default App

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Pacifico";
+  src: local("Pacifico Regular"), local("Pacifico-Regular"), url("../fonts/Pacificoregular.woff2") format("woff2"),
+    url("../fonts/Pacificoregular.woff") format("woff"), url("../fonts/Pacificoregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// null styles
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+body {
+  padding-top: 20px;
+  background-color: #22145f;
+  color: #fff;
+  line-height: 1;
+  font-family: "Pacifico", sans-serif;
+  font-size: 400;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input,
+button,
+textarea {
+  font-family: "Times New Roman", Times, serif;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+// global styles
+
+main {
+  padding-bottom: 50px;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+// swiper styles
+
+.buttonPrev {
+  left: 40%;
+}
+
+.buttonNext {
+  right: 40%;
+}
+
+.buttonPrev,
+.buttonNext {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+
+  path {
+    transition: fill 0.3s;
+  }
+
+  &:hover {
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.buttonPrev.swiper-button-disabled,
+.buttonNext.swiper-button-disabled {
+  cursor: default;
+
+  path {
+    fill: #000;
+  }
+}

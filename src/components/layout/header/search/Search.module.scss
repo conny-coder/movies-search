@@ -1,0 +1,28 @@
+.inner {
+  position: relative;
+
+  .input {
+    box-sizing: content-box;
+    border-radius: 5px;
+    padding: 5px 10px 5px 30px;
+    border: 2px solid transparent;
+    color: #000;
+    transition: all 0.3s;
+
+    &:focus {
+      background-color: #6c707e;
+      border: 2px solid #000;
+    }
+
+    &._disabled {
+      pointer-events: none;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+}

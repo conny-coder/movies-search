@@ -1,0 +1,38 @@
+.logo {
+  display: block;
+  max-width: 395px;
+  margin: 0 auto;
+
+  &:hover {
+    .sub-title::before {
+      left: 10px;
+      right: 170px;
+    }
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.sub-title {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 200px;
+    right: 170px;
+    top: 50%;
+    background: linear-gradient(45deg, #000, #22145f, #fff);
+    transition: all 0.3s;
+  }
+}

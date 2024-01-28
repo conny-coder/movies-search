@@ -1,0 +1,24 @@
+.video {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 50%;
+
+  iframe {
+    border-radius: 10px;
+    max-width: 560px;
+    width: 100%;
+  }
+
+  img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

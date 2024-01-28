@@ -1,0 +1,24 @@
+.pagination {
+  margin-top: 40px;
+  max-width: 600px;
+  padding-bottom: 50px !important;
+
+  .item {
+    padding: 8px;
+    max-width: 50px;
+    border: 2px solid #000;
+    display: block;
+    text-align: center;
+
+    transition: border 0.3s;
+
+    &._active {
+      border: 2px solid #fff;
+      pointer-events: none;
+    }
+
+    &:hover {
+      border: 2px solid #fff;
+    }
+  }
+}
