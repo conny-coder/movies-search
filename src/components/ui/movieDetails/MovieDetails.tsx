@@ -9,12 +9,12 @@ const MovieDetails: FC<
 > = ({ description, genres, rating, year }) => {
 	return (
 		<div className={classes.details}>
-			<div className={classes.item}>Рік виходу: {year}р</div>
+			<div className={classes.item}>Год выхода: {year}р</div>
 			<div className={classes.item}>Жанр: {genreListToString(genres)}</div>
 			<div className={`${classes.item} ${classes.rating}`}>
 				Рейтинг: <Rating count={rating} />
 			</div>
-			<div className={classes.item}>Опис: {description}</div>
+			<div className={classes.item}>Описание: {description}</div>
 		</div>
 	)
 }
